@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { FaHome, FaSignOutAlt, FaSignInAlt, FaList, FaServer, FaRegCommentAlt, FaUserEdit} from "react-icons/fa";
 import logo from './logo.png'
 
 export default class Navibar extends Component {
@@ -15,27 +16,28 @@ export default class Navibar extends Component {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
-                <Nav.Link href="/">홈</Nav.Link>
-                <Nav.Link href="/dm">DM</Nav.Link>
+                
+                <Nav.Link href="/"> <FaHome /> 홈</Nav.Link>
+                <Nav.Link href="/dm"> <FaRegCommentAlt /> DM</Nav.Link>
                 <NavDropdown title="커뮤니티" id="basic-nav-dropdown">
                   <NavDropdown.Item href="/community/all">
-                    전체 커뮤니티
+                    <FaServer /> 전체 커뮤니티
                   </NavDropdown.Item>
                   <NavDropdown.Item href="/community/class">
-                    반별 커뮤니티
+                    <FaList /> 반별 커뮤니티
                   </NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown title="내정보" id="basic-nav-dropdown">
                   <NavDropdown.Item href="/myinfo">
-                    정보수정 및 탈퇴
+                    <FaUserEdit /> 정보수정 및 탈퇴
                   </NavDropdown.Item>
                   <NavDropdown.Item href="/">
-                    로그아웃
+                    <FaSignOutAlt /> 로그아웃
                   </NavDropdown.Item>
                 </NavDropdown>
               </Nav>
               <Nav>
-                <Nav.Link href="/login">로그인</Nav.Link>
+                <Nav.Link href="/login"><FaSignInAlt /> 로그인</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
