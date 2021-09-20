@@ -5,3 +5,4 @@ export { default as community_class } from './community_class';
 export { default as info } from './info';
 export { default as myinfo } from './myinfo';
 export { default as DM } from './dm';
+export { default as login } from './login';
