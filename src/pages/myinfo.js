@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Title from '../components/title';
 import { Container, Button } from 'react-bootstrap';
 
-export default class info extends Component {
+export default class myinfo extends Component {
   render() {
     return (
       <>

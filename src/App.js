@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Navibar from './components/Navibar';
-import Footer from './components/footer';
-import Home from './pages/Home';
-import info from './pages/info';
-import members from './pages/members';
-import projects from './pages/projects';
-import ticktaktoe from './pages/ticktaktoe';
-import NotFound from './pages/NotFound';
+import { Navibar, Footer } from './components';
+import { Home, info, community_all, community_class, DM, NotFound, myinfo } from './pages';
 import "./App.css"
 
 export default class App extends Component {
@@ -18,9 +12,10 @@ export default class App extends Component {
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route exact path="/info" component={info}/>
-            <Route exact path="/members" component={members}/>
-            <Route exact path="/projects" component={projects}/>
-            <Route exact path="/projects/ticktaktoe" component={ticktaktoe}/>
+            <Route exact path="/dm" component={DM}/>
+            <Route exact path="/community/all" component={community_all}/>
+            <Route exact path="/community/class" component={community_class}/>
+            <Route exact path="/myinfo" component={myinfo}/>
 
             <Route component={NotFound}/>
           </Switch>
